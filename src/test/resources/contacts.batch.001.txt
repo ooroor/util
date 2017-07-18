@@ -1,0 +1,375 @@
+# CONTACTS_YAML_001
+# ==============================================================================
+# ==============================================================================
+- &uteteamet !!net.barakiroth.oorutil.BatchUtUnitTest$ContactRawTestClass
+    code                 :
+    nameLast             : 
+    nameMiddle           :
+    nameFirst            : Uteteamet � vakttelefon
+    note                 :
+    emailAddresses       :
+    - {emailAddress : uteteam.barnevern@bsr.oslo.kommune.no, note: null}
+    geographicalAddresses: []
+    phoneSubscriptions   :
+    - {countryCode: 47, areaCode: null, localNumber: 90244471, note: }
+    relationships        : []
+# ==============================================================================
+# ==============================================================================
+- &tove !!net.barakiroth.oorutil.BatchUtUnitTest$ContactRawTestClass
+    code                 :
+    nameLast             : B�rdsnes
+    nameMiddle           :
+    nameFirst            : Ann-Iren
+    note                 : Natteravn Stovner
+    emailAddresses       :
+    - {emailAddress : aibardsnes@gmail.com, note: null}
+    geographicalAddresses: []
+    phoneSubscriptions   :
+    - {countryCode: 47, areaCode: null, localNumber: 47608524, note: }
+    relationships        : []   
+# ==============================================================================
+# ==============================================================================
+- &tove !!net.barakiroth.oorutil.BatchUtUnitTest$ContactRawTestClass
+    code                 :
+    nameLast             : Christiansen
+    nameMiddle           :
+    nameFirst            : Tove S.
+    note                 : SaLTo Stovner
+    emailAddresses       :
+    - {emailAddress : tove-s.christiansen@bsr.oslo.kommune.no, note: null}
+    geographicalAddresses: []
+    phoneSubscriptions   :
+    - {countryCode: 47, areaCode: null, localNumber: 23471027, note: }
+    relationships        : []
+# ==============================================================================
+# ==============================================================================
+- &may !!net.barakiroth.oorutil.BatchUtUnitTest$ContactRawTestClass
+    code                 :
+    nameLast             : Grunnaleite
+    nameMiddle           :
+    nameFirst            : May Britt
+    note                 : SaLTo Bjerke
+    emailAddresses       :
+    - {emailAddress : may.grunnaleite@bbj.oslo.kommune.no, note: null}
+    geographicalAddresses: []
+    phoneSubscriptions   :
+    - {countryCode: 47, areaCode: null, localNumber: 47611620, note: }
+    relationships        : []
+# ==============================================================================
+# ==============================================================================
+- &politi !!net.barakiroth.oorutil.BatchUtUnitTest$ContactRawTestClass
+    code                 :
+    nameLast             : 
+    nameMiddle           :
+    nameFirst            : Politiet Stovner � Forebyggende
+    note                 :
+    emailAddresses       : []
+    geographicalAddresses: []
+    phoneSubscriptions   :
+    - {countryCode: 47, areaCode: null, localNumber: 22669050, note: Sentralbord}
+    - {countryCode: 47, areaCode: null, localNumber: 02800, note: Sentralbord}
+    - {countryCode: 47, areaCode: null, localNumber: 112, note: N�dnummer}
+    relationships        : []
+# ==============================================================================
+# ==============================================================================
+- &politiforebygg !!net.barakiroth.oorutil.BatchUtUnitTest$ContactRawTestClass
+    code                 :
+    nameLast             : 
+    nameMiddle           :
+    nameFirst            : Politiet Stovner � Forebyggende
+    note                 :
+    emailAddresses       :
+    - {emailAddress : roy.einarsen@politiet.no, note: null}
+    geographicalAddresses: []
+    phoneSubscriptions   :
+    - {countryCode: 47, areaCode: null, localNumber: 22668923, note: Vakttelefon hverdager 08-23}
+    relationships        : []
+# ==============================================================================
+# ==============================================================================
+- &mohamed !!net.barakiroth.oorutil.BatchUtUnitTest$ContactRawTestClass
+    code                 :
+    nameLast             : Shaoudi 
+    nameMiddle           :
+    nameFirst            : Mohamed
+    note                 :
+    emailAddresses       : []
+    geographicalAddresses: []
+    phoneSubscriptions   :
+    - {countryCode: 47, areaCode: null, localNumber: 40067120, note: null}
+    relationships        :
+    - role: sonOf
+      contact: &shaoudi
+        code       :
+        nameLast   : Amin
+        nameMiddle :
+        nameFirst  : Shaoudi
+        note       :
+        emailAddresses       :
+        - {emailAddress : AminLaracliegg@hotmail.com, note: null}
+        geographicalAddresses: []
+        phoneSubscriptions   :
+        - {countryCode: 47, areaCode: null, localNumber: 96861121, note: null}
+        relationships        :
+        - {role: fatherTo, contact: *mohamed}
+    - role: sonOf
+      contact: &lksbi
+        code                 :
+        nameLast             : Zinbi
+        nameMiddle           :
+        nameFirst            : Lksbi
+        note                 :
+        emailAddresses       : []
+        geographicalAddresses: []
+        phoneSubscriptions   :
+        - {countryCode: 47, areaCode: null, localNumber: 95409143, note: null}
+        relationships        :
+        - {role: motherOf, contact: *mohamed}
+# ==============================================================================
+- *shaoudi
+# ==============================================================================
+- *lksbi
+# ==============================================================================
+# ==============================================================================
+- &gio !!net.barakiroth.oorutil.BatchUtUnitTest$ContactRawTestClass
+    code                 :
+    nameLast             : Sedler 
+    nameMiddle           :
+    nameFirst            : Gio
+    note                 :
+    emailAddresses       : []
+    geographicalAddresses: []
+    phoneSubscriptions   :
+    - {countryCode: 47, areaCode: null, localNumber: 46637849, note: null}
+    relationships        :
+    - role: sonOf
+      contact: &zulfiqar
+        code                 :
+        nameLast             : Sedler
+        nameMiddle           :
+        nameFirst            : Zulfiqar
+        note                 :
+        emailAddresses       :
+        - {emailAddress : zulfiqarsedler46@hotmail.com, note: null}
+        geographicalAddresses: []
+        phoneSubscriptions   :
+        - {countryCode: 47, areaCode: null, localNumber: 45412106, note: null}
+        relationships        :
+        - {role: fatherTo, contact: *gio}
+# ==============================================================================
+- *zulfiqar
+# ==============================================================================
+# ==============================================================================
+- &yousef !!net.barakiroth.oorutil.BatchUtUnitTest$ContactRawTestClass
+    code                 :
+    nameFirst            : Yousef 
+    nameMiddle           :
+    nameLast             : Austrheim
+    note                 :
+    emailAddresses       : []
+    geographicalAddresses: []
+    phoneSubscriptions   :
+    - {countryCode: 47, areaCode: null, localNumber: 94290672, note: null}
+    relationships        :
+    - role: sonOf
+      contact: &hilde
+        code                 :
+        nameLast             : Austrheim
+        nameMiddle           :
+        nameFirst            : Hilde
+        note                 : Mammaen til Yousef
+        
+        emailAddresses       :
+        - {emailAddress : hilde.austrheim@live.no, note: null}
+        
+        geographicalAddresses: []
+        phoneSubscriptions   :
+        - {countryCode: 47, areaCode: null, localNumber: 94100278, note: null}
+        relationships        :
+        - {role: motherOf, contact: *yousef}
+# ==============================================================================
+- *hilde
+# ==============================================================================
+# ==============================================================================
+- &gokay !!net.barakiroth.oorutil.BatchUtUnitTest$ContactRawTestClass
+    code                 : null
+    nameFirst            : G�kay 
+    nameMiddle           :
+    nameLast             : 
+    note                 :
+    emailAddresses       : []
+    geographicalAddresses: []
+    phoneSubscriptions   :
+    - {countryCode: 47, areaCode: null, localNumber: 40067120, note: null}
+    relationships        :
+    - role: sonOf
+      contact: &kadir
+        code       :
+        nameLast   : Cetin
+        nameMiddle :
+        nameFirst  : Kadir
+        note       : Pappaen til G�kay
+        emailAddresses       :
+        - {emailAddress : norgesbuss_@hotmail.com, note: null}
+        geographicalAddresses: []
+        phoneSubscriptions   :
+        - {countryCode: 47, areaCode: null, localNumber: 93492934, note: null}
+        relationships        :
+        - {role: fatherTo, contact: *gokay}
+    - role: sonOf
+      contact: &zeynep
+        code                 :
+        nameLast             : Cetin
+        nameMiddle           :
+        nameFirst            : Zeynep
+        note                 : Mammaen til G�kay
+        emailAddresses       : []
+        geographicalAddresses: []
+        phoneSubscriptions   :
+        - {countryCode: 47, areaCode: null, localNumber: 98623693, note: null}
+        relationships        :
+        - {role: motherOf, contact: *gokay}
+# ==============================================================================
+- *kadir
+# ==============================================================================
+- *zeynep
+# ==============================================================================
+# ==============================================================================
+- &alexander !!net.barakiroth.oorutil.BatchUtUnitTest$ContactRawTestClass
+    code                 : null
+    nameFirst            : Alexander 
+    nameMiddle           :
+    nameLast             : Roth
+    note                 :
+    emailAddresses       :
+    - {emailAddress      : alexander@barakiroth.net, note: null}
+    geographicalAddresses:
+    - {address01: Idas vei 62, address02:, address03:, postalCode: '0981', postalCodeName : Oslo}
+    phoneSubscriptions   :
+    - {countryCode: 47, areaCode: null, localNumber: 40067120, note: null}
+    relationships        :
+    - role: sonOf
+      contact: &oyvind
+        code       :
+        nameLast   : Roth
+        nameMiddle :
+        nameFirst  : �yvind
+        note       : Pappaen til Alexander Baraki Roth
+        emailAddresses       :
+        - {emailAddress : oyvind@barakiroth.net, note: null}
+        geographicalAddresses:
+        - {address01: Idas vei 62, address02:, address03:, postalCode: '0981', postalCodeName : Oslo}
+        phoneSubscriptions   :
+        - {countryCode: 47, areaCode: null, localNumber: 45811956, note: null}
+        relationships        :
+        - {role: fatherTo, contact: *alexander}
+    - role: sonOf
+      contact: &fekadie
+        code                 : null
+        nameLast             : Roth
+        nameMiddle           :
+        nameFirst            : Fekadie
+        note                 : Mammaen til Alexander Baraki Roth
+        emailAddresses       :
+        - {emailAddress : fekadie@barakiroth.net, note: null}
+        geographicalAddresses:
+        - {address01: Idas vei 62, address02:, address03:, postalCode: '0981', postalCodeName : Oslo}
+        phoneSubscriptions   :
+        - {countryCode: 47, areaCode: null, localNumber: 98873070, note: null}
+        relationships        :
+        - {role: motherOf, contact: *alexander}
+# ==============================================================================
+- *oyvind
+# ==============================================================================
+- *fekadie
+# ==============================================================================
+# ==============================================================================
+- &saqlain !!net.barakiroth.oorutil.BatchUtUnitTest$ContactRawTestClass
+    code                 :
+    nameLast             :  
+    nameMiddle           :
+    nameFirst            : Saqlain
+    note                 :
+    emailAddresses       :
+    - {emailAddress      : alexander@barakiroth.net, note: null}
+    geographicalAddresses:
+    - {address01: Idas vei 62, address02:, address03:, postalCode: '0981', postalCodeName : Oslo}
+    phoneSubscriptions   :
+    - {countryCode: 47, areaCode: null, localNumber: 40067120, note: null}
+    relationships        :
+    - role: sonOf
+      contact: &muhammad
+        code       :
+        nameLast   : Haroon
+        nameMiddle :
+        nameFirst  : Muhammad
+        note       : Pappaen til Saqlain
+        emailAddresses       : []
+        geographicalAddresses: []
+        phoneSubscriptions   :
+        - {countryCode: 47, areaCode: null, localNumber: 94261234, note: null}
+        relationships        :
+        - {role: fatherTo, contact: *saqlain}
+    - role: sonOf
+      contact: &rehana
+        code                 :
+        nameLast             : Kausar
+        nameMiddle           :
+        nameFirst            : Rehana
+        note                 : Mammaen til Saqlain
+        emailAddresses       :
+        - {emailAddress : rehana@live.no, note: null}
+        geographicalAddresses: []
+        phoneSubscriptions   :
+        - {countryCode: 47, areaCode: null, localNumber: 45697601, note: null}
+        relationships        :
+        - {role: motherOf, contact: *saqlain}
+# ==============================================================================
+- *muhammad
+# ==============================================================================
+- *rehana
+# ==============================================================================
+# ==============================================================================
+- &emanuel !!net.barakiroth.oorutil.BatchUtUnitTest$ContactRawTestClass
+    code                 : null
+    nameFirst            : Emanuel 
+    nameMiddle           :
+    nameLast             : Rogozinski
+    note                 :
+    emailAddresses       :
+    - {emailAddress      : rafal.rogozinski1@wp.pl, note: null}
+    geographicalAddresses: []
+    phoneSubscriptions   :
+    - {countryCode: 47, areaCode: null, localNumber: 48668907, note: null}
+    relationships        :
+    - role: sonOf
+      contact: &rafal
+        code                 : null
+        nameFirst            : Rafal
+        nameMiddle           :
+        nameLast             : Rogozinski
+        note                 : Pappaen til Emanuel Rogozinski
+        emailAddresses       :
+        - {emailAddress : rafal.rogozinski1@wp.pl, note: null}
+        geographicalAddresses: []
+        phoneSubscriptions   :
+        - {countryCode: 47, areaCode: null, localNumber: 96840374, note: null}
+        relationships        :
+        - {role: fatherTo, contact: *emanuel}
+    - role: sonOf
+      contact: &iwona
+        code                 : null
+        nameFirst            : Iwona
+        nameMiddle           :
+        nameLast             : Rogozinski
+        note                 : Mammaen til Emanuel Rogozinski
+        emailAddresses       : []
+        geographicalAddresses: []
+        phoneSubscriptions   : []
+        relationships        :
+        - {role: motherOf, contact: *emanuel}
+# ==============================================================================
+- *rafal
+# ==============================================================================
+- *iwona
+# ==============================================================================
+# ==============================================================================

@@ -1,0 +1,260 @@
+// Copyright (C) 2014 barakiroth.net
+// All rights reserved
+package net.barakiroth.oorutil.tuples;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertSame;
+import static org.junit.Assert.assertTrue;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.junit.experimental.categories.Category;
+import org.slf4j.LoggerFactory;
+
+import ch.qos.logback.classic.Logger;
+import net.barakiroth.oortestutil.IUnitTestCategory;
+
+/** Tests {@link Tuple010}.
+ */
+public class Tuple010UnitTest {
+	//// =======================================================================
+	//// BEGIN nested classes and enums
+	////
+	////
+	//// END nested classes and enums
+	//// =======================================================================
+	////
+	//// S T A T I C
+	//// =======================================================================
+	//// BEGIN static variables
+	//// =======================================================================
+	//// BEGIN static public variables
+	////
+	////
+	//// END static public variables
+	//// =======================================================================
+	//// BEGIN static protected variables
+	////
+	////
+	//// END static protected variables
+	//// =======================================================================
+	//// BEGIN static package variables
+	////
+	////
+	//// END static package variables
+	//// =======================================================================
+	//// BEGIN static private variables
+	////
+	/**
+	 * For logging purposes, e.g. to file.
+	 */
+	@SuppressWarnings("unused")
+	private final static Logger logger =
+		(Logger)LoggerFactory.getLogger(Tuple010UnitTest.class);
+	////
+	//// END static private variables
+	//// =======================================================================
+	//// END static variables
+	//// =======================================================================
+	////
+	//// I N S T A N C E
+	//// =======================================================================
+	//// BEGIN instance variables
+	//// =======================================================================
+	//// BEGIN instance public variables
+	////
+	////
+	//// END instance public variables
+	//// =======================================================================
+	//// BEGIN instance protected variables
+	////
+	////
+	//// END instance protected variables
+	//// =======================================================================
+	//// BEGIN instance package variables
+	////
+	////
+	//// END instance package variables
+	//// =======================================================================
+	//// BEGIN instance private variables
+	////
+	////
+	//// END instance private variables
+	//// =======================================================================
+	//// END instance variables
+	//// =======================================================================
+	//// =======================================================================
+	//// BEGIN Constructors
+	////
+	////
+	//// END Constructors
+	//// =======================================================================
+	//// =======================================================================
+	//// BEGIN Methods
+	////
+	/**
+	 * @throws java.lang.Exception if something unexpected occurs.
+	 */
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+	}
+
+	/**
+	 * @throws java.lang.Exception if something unexpected occurs.
+	 */
+	@AfterClass
+	public static void tearDownAfterClass() throws Exception {
+	}
+
+	/**
+	 * @throws java.lang.Exception if something unexpected occurs.
+	 */
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	/**
+	 * @throws java.lang.Exception if something unexpected occurs.
+	 */
+	@After
+	public void tearDown() throws Exception {
+	}
+	
+	//// =======================================================================
+
+	/**
+	 * Tests {@link Tuple010#getV001()},
+	 * {@link Tuple010#getV002()},
+	 * {@link Tuple010#getV003()},
+	 * {@link Tuple010#getV004()},
+	 * {@link Tuple010#getV005()},
+	 * {@link Tuple010#getV006()},
+	 * {@link Tuple010#getV007()},
+	 * {@link Tuple010#getV008()},
+	 * {@link Tuple010#getV009()},
+	 * {@link Tuple010#getV010()},
+	 * {@link Tuple010#equals(Object)}
+	 * and
+	 * {@link Tuple010#hashCode()}.
+	 */
+	@Test
+	@Category({IUnitTestCategory.class})
+	public final void testTuple010() {
+
+		final String expectedV1 = "ABC";
+		final Boolean expectedV2 = true;
+		final String expectedV3 = "DEF nskldc s";
+		final Integer expectedV4 = 117;
+		final String expectedV5 = "    ";
+		final String expectedV6 = "  x  ";
+		final String expectedV7 = " Goodbye abc x  ";
+		final String expectedV8 = " Hello abc x  ";
+		final String expectedV9 = " abc xPQR  ";
+		final String expectedV10 = " abc x XYZ ";
+
+		final Tuple010<String, Boolean, String, Integer, String, String, String, String, String, String> tuple004V1 =
+			new Tuple010<String, Boolean, String, Integer, String, String, String, String, String, String>(expectedV1, expectedV2, expectedV3, expectedV4, expectedV5, expectedV6, expectedV7, expectedV8, expectedV9, expectedV10);
+
+		final Tuple010<String, Boolean, String, Integer, String, String, String, String, String, String> tuple004V2 =
+				new Tuple010<String, Boolean, String, Integer, String, String, String, String, String, String>(expectedV1, expectedV2, expectedV3, expectedV4, expectedV5, expectedV6, expectedV7, expectedV8, expectedV9, expectedV10);
+
+		final Tuple010<String, Boolean, String, Integer, String, String, String, String, String, String> tuple004V3 =
+				new Tuple010<String, Boolean, String, Integer, String, String, String, String, String, String>(expectedV1, expectedV2, expectedV3, -1, expectedV5, expectedV6, expectedV7, expectedV8, expectedV9, expectedV10);
+
+		final Tuple009<String, Boolean, String, Integer, String, String, String, String, String> tuple003V4 =
+				new Tuple009<String, Boolean, String, Integer, String, String, String, String, String>(expectedV1, expectedV2, expectedV3, expectedV4, expectedV5, expectedV6, expectedV7, expectedV8, expectedV9);		
+
+		final Tuple010<String, Boolean, String, Integer, String, String, String, String, String, String> tuple004V5 =
+				new Tuple010<String, Boolean, String, Integer, String, String, String, String, String, String>(expectedV1, expectedV2, expectedV3, expectedV4, expectedV5, expectedV6, expectedV7, expectedV8, null, null);
+
+		final Tuple009<String, Boolean, String, Integer, String, String, String, String, String> tuple003V6 =
+				new Tuple009<String, Boolean, String, Integer, String, String, String, String, String>(expectedV1, expectedV2, expectedV3, expectedV4, expectedV5, expectedV6, expectedV7, expectedV8, null);
+
+		final String actualV1 = tuple004V1.getV001();
+		final Boolean actualV2 = tuple004V1.getV002();
+		final String actualV3 = tuple004V1.getV003();
+		final Integer actualV4 = tuple004V1.getV004();
+		final String actualV5 = tuple004V1.getV005();
+		final String actualV6 = tuple004V1.getV006();
+		final String actualV7 = tuple004V1.getV007();
+		final String actualV8 = tuple004V1.getV008();
+		final String actualV9 = tuple004V1.getV009();
+		final String actualV10 = tuple004V1.getV010();
+
+		assertEquals(expectedV1, actualV1);
+		assertEquals(expectedV2, actualV2);
+		assertEquals(expectedV3, actualV3);
+		assertEquals(expectedV4, actualV4);
+		assertEquals(expectedV5, actualV5);
+		assertEquals(expectedV6, actualV6);
+		assertEquals(expectedV7, actualV7);
+		assertEquals(expectedV8, actualV8);
+		assertEquals(expectedV9, actualV9);
+		assertEquals(expectedV10, actualV10);
+
+		assertEquals(tuple004V1, tuple004V1);
+		assertEquals(tuple004V1.hashCode(), tuple004V1.hashCode());
+		assertEquals(tuple004V2, tuple004V2);
+		assertEquals(tuple004V2.hashCode(), tuple004V2.hashCode());
+		assertEquals(tuple004V3, tuple004V3);
+		assertEquals(tuple004V3.hashCode(), tuple004V3.hashCode());
+		assertEquals(tuple003V4, tuple003V4);
+		assertEquals(tuple003V4.hashCode(), tuple003V4.hashCode());
+		assertEquals(tuple004V5, tuple004V5);
+		assertEquals(tuple004V5.hashCode(), tuple004V5.hashCode());
+		assertEquals(tuple003V6, tuple003V6);
+		assertEquals(tuple003V6.hashCode(), tuple003V6.hashCode());
+
+		assertEquals(tuple004V1, tuple004V2);
+		assertEquals(tuple004V1.hashCode(), tuple004V2.hashCode());
+		assertNotEquals(tuple004V1, tuple004V3);
+		assertNotEquals(tuple004V1.hashCode(), tuple004V3.hashCode());
+		assertNotEquals(tuple004V1, tuple003V4);
+		assertNotEquals(tuple004V1.hashCode(), tuple003V4.hashCode());
+		assertNotEquals(tuple004V5, tuple003V6);
+		assertNotEquals(tuple004V5.hashCode(), tuple003V6.hashCode());
+	}
+	
+	/** Tests
+	 * {@link Tuple010#nullTuple()}
+	 * and
+	 * {@link Tuple010#isNullTuple()}.
+	 */
+	@Test
+	@Category({IUnitTestCategory.class})
+	public final void testNullTuple() {
+		final Tuple010<String, String, String, String, String, String, String, String, String, String> tuple1 =
+				Tuple010.nullTuple();
+		final Tuple010<String, String, String, String, String, String, String, String, String, String> tuple2 =
+				Tuple010.nullTuple();
+		
+		assertEquals(tuple1, tuple2);
+		assertSame(tuple1, tuple2);
+
+		assertTrue(tuple1.isNullTuple());
+		assertTrue(tuple2.isNullTuple());
+		
+		assertNull(tuple1.getV001());
+		assertNull(tuple1.getV002());
+		assertNull(tuple1.getV003());
+		assertNull(tuple1.getV004());
+		assertNull(tuple1.getV005());
+		assertNull(tuple1.getV006());
+		assertNull(tuple1.getV007());
+		assertNull(tuple1.getV008());
+		assertNull(tuple1.getV009());
+		assertNull(tuple1.getV010());
+	}
+	////
+	//// END Methods
+	//// =======================================================================
+}
+/*
+Revision history:
+$Log:$
+*/
