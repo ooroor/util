@@ -5,12 +5,12 @@
  */
 package net.barakiroth.oorutil.tuples;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -31,12 +31,12 @@ import org.javatuples.Sextet;
 import org.javatuples.Triplet;
 import org.javatuples.Tuple;
 import org.javatuples.Unit;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
 import org.junit.experimental.categories.Category;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import net.barakiroth.oortestutil.IUnitTestCategory;
 
@@ -116,28 +116,28 @@ public class TupUtUnitTest {
 	/**
 	 * @throws java.lang.Exception If something unexpected occurs.
 	 */
-	@BeforeClass
+	@BeforeAll
 	public static void setUpBeforeClass() throws Exception {
 	}
 
 	/**
 	 * @throws java.lang.Exception If something unexpected occurs.
 	 */
-	@AfterClass
+	@AfterAll
 	public static void tearDownAfterClass() throws Exception {
 	}
 
 	/**
 	 * @throws java.lang.Exception If something unexpected occurs.
 	 */
-	@Before
+	@BeforeEach
 	public void setUp() throws Exception {
 	}
 
 	/**
 	 * @throws java.lang.Exception If something unexpected occurs.
 	 */
-	@After
+	@AfterEach
 	public void tearDown() throws Exception {
 	}
 	

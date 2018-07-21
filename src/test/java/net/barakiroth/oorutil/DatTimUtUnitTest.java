@@ -5,20 +5,21 @@
  */
 package net.barakiroth.oorutil;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 import java.sql.Timestamp;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Month;
 import java.util.Calendar;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /** Tests {@link DatTimUt}.
  */
@@ -94,13 +95,13 @@ public class DatTimUtUnitTest {
 	////
 	/** @throws java.lang.Exception if something unexpected occurs
 	 */
-	@BeforeClass
+	@BeforeAll
 	public static void setUpBeforeClass() throws Exception {
 	}
 
 	/** @throws java.lang.Exception if something unexpected occurs
 	 */
-	@AfterClass
+	@AfterAll
 	public static void tearDownAfterClass() throws Exception {
 	}
 	
@@ -109,14 +110,14 @@ public class DatTimUtUnitTest {
 	/**
 	 * @throws java.lang.Exception if something unexpected occurs
 	 */
-	@Before
+	@BeforeEach
 	public void setUp() throws Exception {
 	}
 
 	/**
 	 * @throws java.lang.Exception if something unexpected occurs
 	 */
-	@After
+	@AfterEach
 	public void tearDown() throws Exception {
 	}
 	

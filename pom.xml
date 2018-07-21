@@ -8,21 +8,85 @@
 	<description>A project created by an archetype</description>
 	<groupId>net.barakiroth.oorutil</groupId>
 	<artifactId>oorutil</artifactId>
-	<version>1.0.2</version>
+	<version>1.0.3-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<jacoco.maven.plugin.version>0.7.9</jacoco.maven.plugin.version>		
+		<jacoco.maven.plugin.version>0.7.9</jacoco.maven.plugin.version>
+		
+		<junit-jupiter.version>5.2.0</junit-jupiter.version>
+		<junit-jupiter-api.version>5.2.0</junit-jupiter-api.version>
+		<junit-platform-launcher.version>1.2.0</junit-platform-launcher.version>
+		<org.junit.platform.version>1.2.0</org.junit.platform.version>
+		<maven-surefire-plugin.version>2.22.0</maven-surefire-plugin.version>
+		<guava.version>25.1-jre</guava.version>
+				
 	</properties>
+	
+	<profiles>
+	
+		<profile>
+			<id>eclipse</id>
+	        <dependencyManagement>
+	            <dependencies>
+	                <dependency>
+	                    <groupId>org.junit.platform</groupId>
+	                    <artifactId>junit-platform-launcher</artifactId>
+	                    <version>${junit-platform-launcher.version}</version>
+	                    <scope>test</scope>
+	                </dependency>
+	            </dependencies>
+	        </dependencyManagement>
+	        
+	        <dependencies>
+	            <dependency>
+	                <groupId>org.junit.platform</groupId>
+	                <artifactId>junit-platform-launcher</artifactId>
+	            </dependency>
+	        </dependencies>
+	    </profile>
+	    
+    </profiles>
+    
+	<dependencyManagement>
+		<dependencies>
+		
+			<dependency>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter-api</artifactId>
+				<version>${junit-jupiter-api.version}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+			    <groupId>org.junit.jupiter</groupId>
+			    <artifactId>junit-jupiter-engine</artifactId>
+			    <version>${junit-jupiter.version}</version>
+			    <scope>test</scope>
+			</dependency>
+			
+			<dependency>
+			    <groupId>com.google.guava</groupId>
+			    <artifactId>guava</artifactId>
+			    <version>${guava.version}</version>
+			</dependency>						
+		
+		</dependencies>
+	</dependencyManagement>
 
 	<dependencies>
-		
+
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.12</version>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
 			<scope>test</scope>
+		</dependency>
+	
+		<dependency>
+		    <groupId>org.junit.jupiter</groupId>
+		    <artifactId>junit-jupiter-engine</artifactId>
+		    <scope>test</scope>
 		</dependency>
 
 		<dependency>
@@ -66,7 +130,7 @@
 		<dependency>
 			<groupId>net.barakiroth.oortestutil</groupId>
 			<artifactId>oortestutil</artifactId>
-			<version>1.0.2</version>
+			<version>[1.1.0,)</version>
 			<scope>test</scope>
 		</dependency>
 		
@@ -105,9 +169,42 @@
 		    <version>1.1.0.Final</version>
 		</dependency>
 
+		<dependency>
+		    <groupId>com.google.guava</groupId>
+		    <artifactId>guava</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>
+
+		<pluginManagement>
+			<plugins>
+	        
+				<plugin>
+				    <artifactId>maven-surefire-plugin</artifactId>
+				    <version>${maven-surefire-plugin.version}</version>
+				    <dependencies>
+		
+				        <dependency>
+				            <groupId>org.junit.platform</groupId>
+				            <artifactId>junit-platform-surefire-provider</artifactId>
+				            <version>${org.junit.platform.version}</version>
+				        </dependency>
+				
+				        <dependency>
+				            <groupId>org.junit.jupiter</groupId>
+				            <artifactId>junit-jupiter-engine</artifactId>
+				            <version>${junit-jupiter.version}</version>
+				        </dependency>
+				
+				    </dependencies>
+				</plugin>
+			
+			</plugins>
+
+	    </pluginManagement>
+	
 		<plugins>
 		
 			<!--  The most compatible way to set the java version -->

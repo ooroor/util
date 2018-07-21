@@ -5,19 +5,19 @@
  */
 package net.barakiroth.oorutil.tuples;
 
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
 import org.junit.experimental.categories.Category;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.slf4j.LoggerFactory;
 
 import ch.qos.logback.classic.Logger;
@@ -105,28 +105,28 @@ public class Tuple002PermutatorUnitTest {
 	/**
 	 * @throws java.lang.Exception if something unexpected occurs.
 	 */
-	@BeforeClass
+	@BeforeAll
 	public static void setUpBeforeClass() throws Exception {
 	}
 
 	/**
 	 * @throws java.lang.Exception if something unexpected occurs.
 	 */
-	@AfterClass
+	@AfterAll
 	public static void tearDownAfterClass() throws Exception {
 	}
 
 	/**
 	 * @throws java.lang.Exception if something unexpected occurs.
 	 */
-	@Before
+	@BeforeEach
 	public void setUp() throws Exception {
 	}
 
 	/**
 	 * @throws java.lang.Exception if something unexpected occurs.
 	 */
-	@After
+	@AfterEach
 	public void tearDown() throws Exception {
 	}
 	

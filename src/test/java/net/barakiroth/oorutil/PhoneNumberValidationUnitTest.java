@@ -2,21 +2,21 @@
 // All rights reserved
 package net.barakiroth.oorutil;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
 import org.junit.experimental.categories.Category;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import net.barakiroth.oortestutil.IUnitTestCategory;
 import net.barakiroth.oorutil.PhoneNumber.PhoneNoValRes;
@@ -99,25 +99,25 @@ public class PhoneNumberValidationUnitTest {
 	////
 	/** @throws java.lang.Exception If something unexpected occurs.
 	 */
-	@BeforeClass
+	@BeforeAll
 	public static void setUpBeforeClass() throws Exception {
 	}
 
 	/** @throws java.lang.Exception If something unexpected occurs.
 	 */
-	@AfterClass
+	@AfterAll
 	public static void tearDownAfterClass() throws Exception {
 	}
 
 	/** @throws java.lang.Exception If something unexpected occurs.
 	 */
-	@Before
+	@BeforeEach
 	public void setUp() throws Exception {
 	}
 
 	/** @throws java.lang.Exception If something unexpected occurs.
 	 */
-	@After
+	@AfterEach
 	public void tearDown() throws Exception {
 	}
 	
@@ -178,7 +178,7 @@ public class PhoneNumberValidationUnitTest {
 			final Tuple004<String, String, String, PhoneNoValRes> actual =
 				PhoneNumber.parseAndValidatePhoneNumber(defaultCountryCode, defaultAreaCode, rawPhoneNumber);
 
-			assertEquals("cnt: " + cnt, expected, actual);
+			assertEquals(expected, actual, "cnt: " + cnt);
 		}
 	}
 
@@ -226,15 +226,16 @@ public class PhoneNumberValidationUnitTest {
 				PhoneNumber.parseAndValidatePhoneNumber(defaultCountryCode, defaultAreaCode, rawPhoneNumber);
 			final PhoneNoValRes actualPhoneNoValRes = res.getV004();
 			assertEquals(
-				  "turn              : " + turn
+				expectedPhoneNoValRes,
+				actualPhoneNoValRes,
+			      "turn              : " + turn
 				+ System.lineSeparator()
 				+ "defaultCountryCode: " + defaultCountryCode
 				+ System.lineSeparator()
 				+ "defaultAreaCode   : " + defaultAreaCode
 				+ System.lineSeparator()
 				+ "rawPhoneNumber    : " + rawPhoneNumber
-				+ System.lineSeparator()
-				, expectedPhoneNoValRes, actualPhoneNoValRes);
+				+ System.lineSeparator());
 			if (expectedPhoneNoValRes.equals(PhoneNoValRes.INVALID)) {
 				assertNull(res.getV001());
 				assertNull(res.getV002());

@@ -5,28 +5,26 @@
  */
 package net.barakiroth.oorutil;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import org.junit.experimental.categories.Category;
-
 import net.barakiroth.oortestutil.IUnitTestCategory;
 import net.barakiroth.oorutil.tuples.Tuple005;
 import net.barakiroth.oorutil.tuples.Tuple006;
 import net.barakiroth.oorutil.tuples.Tuple007;
+import org.junit.experimental.categories.Category;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /** Tests {@link PhoneNumber}.
  */
@@ -102,13 +100,13 @@ public class PhoneNumberUnitTest {
 	////
 	/** @throws java.lang.Exception If something unexpected occurs.
 	 */
-	@BeforeClass
+	@BeforeAll
 	public static void setUpBeforeClass() throws Exception {
 	}
 
 	/** @throws java.lang.Exception If something unexpected occurs.
 	 */
-	@AfterClass
+	@AfterAll
 	public static void tearDownAfterClass() throws Exception {
 	}
 
@@ -148,13 +146,13 @@ public class PhoneNumberUnitTest {
 
 	/** @throws java.lang.Exception If something unexpected occurs.
 	 */
-	@Before
+	@BeforeEach
 	public void setUp() throws Exception {
 	}
 
 	/** @throws java.lang.Exception If something unexpected occurs.
 	 */
-	@After
+	@AfterEach
 	public void tearDown() throws Exception {
 	}
 
@@ -461,10 +459,10 @@ public class PhoneNumberUnitTest {
 			final boolean expectedValid = testDataAndResult.getV005();
 			final PhoneNumber actualPhoneNumber =
 					PhoneNumber.createInstanceFromConcatenation(concatenatedPhoneNumber);
-			assertEquals("turn: " + turn, expectedCountryCode, actualPhoneNumber.getCountryCode());
-			assertEquals("turn: " + turn, expectedAreaCode, actualPhoneNumber.getAreaCode());
-			assertEquals("turn: " + turn, expectedNoLocal, actualPhoneNumber.getNoLocal());
-			assertEquals("turn: " + turn, expectedValid, actualPhoneNumber.isValid());
+			assertEquals(expectedCountryCode, actualPhoneNumber.getCountryCode(), "turn: " + turn);
+			assertEquals(expectedAreaCode, actualPhoneNumber.getAreaCode(), "turn: " + turn);
+			assertEquals(expectedNoLocal, actualPhoneNumber.getNoLocal(), "turn: " + turn);
+			assertEquals(Boolean.valueOf(expectedValid), Boolean.valueOf(actualPhoneNumber.isValid()), "turn: " + turn);
 		}
 	}
 
