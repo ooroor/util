@@ -196,10 +196,10 @@ public class Tuple006PerformanceTest {
 			stats.addValue(ratios[j]);
 			System.out.println(
 					  System.lineSeparator()
-					+ "elapsed1 (Tuple004)                                    : " + elapsed1 + System.lineSeparator()
-					+ "elapsed2 (Quartet)                                     : " + elapsed2 + System.lineSeparator()
-					+ "delta(elapsed2 - elapsed1) [delta(Quartet - Tuple004)] : " + (elapsed2 - elapsed1) + System.lineSeparator()
-					+ "delta*100/elapsed1                                     : " + ratios[j] + "%" + System.lineSeparator()
+					+ "elapsed1 in ms (Tuple006)                             : " + elapsed1 + System.lineSeparator()
+					+ "elapsed2 in ms (Sextet)                               : " + elapsed2 + System.lineSeparator()
+					+ "delta(elapsed2 - elapsed1) [delta(Sextet - Tuple006)] : " + (elapsed2 - elapsed1) + System.lineSeparator()
+					+ "delta*100/elapsed1                                    : " + ratios[j] + "%" + System.lineSeparator()
 					);
 		} // END for
 

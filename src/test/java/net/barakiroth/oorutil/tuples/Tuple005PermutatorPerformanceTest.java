@@ -212,7 +212,7 @@ public class Tuple005PermutatorPerformanceTest {
 						  System.lineSeparator()
 						+ "elapsed1 (Tuple005)                                    : " + elapsed1 + System.lineSeparator()
 						+ "elapsed2 (Quintet)                                     : " + elapsed2 + System.lineSeparator()
-						+ "delta(elapsed2 - elapsed1) [delta(Quartet - Tuple004)] : " + (elapsed2 - elapsed1) + System.lineSeparator()
+						+ "delta(elapsed2 - elapsed1) [delta(Quintet - Tuple005)] : " + (elapsed2 - elapsed1) + System.lineSeparator()
 						+ "delta*100/elapsed1                                     : " + ratios[j] + "%" + System.lineSeparator()
 						);
 		} // END for
