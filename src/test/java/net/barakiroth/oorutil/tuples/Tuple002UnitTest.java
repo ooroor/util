@@ -134,6 +134,7 @@ public class Tuple002UnitTest {
 	/** Tests {@link Tuple002#equals(Object)}
 	 * for tuples of different sizes.
 	 */
+	@SuppressWarnings("unlikely-arg-type")
 	@Test
 	@Category({IUnitTestCategory.class})
 	public final void testEqualsDifferentSizes_1() {
@@ -164,6 +165,7 @@ public class Tuple002UnitTest {
 	/** Tests {@link Tuple002#equals(Object)}
 	 * for tuples of different sizes.
 	 */
+	@SuppressWarnings("unlikely-arg-type")
 	@Test
 	@Category({IUnitTestCategory.class})
 	public final void testEqualsDifferentSizes_2() {
@@ -194,6 +196,7 @@ public class Tuple002UnitTest {
 	/** Tests {@link Tuple002#equals(Object)}
 	 * for tuples of different sizes.
 	 */
+	@SuppressWarnings("unlikely-arg-type")
 	@Test
 	@Category({IUnitTestCategory.class})
 	public final void testEqualsDifferentSizes_3() {
@@ -224,6 +227,7 @@ public class Tuple002UnitTest {
 	/** Tests {@link Tuple002#equals(Object)}
 	 * for tuples of different sizes.
 	 */
+	@SuppressWarnings("unlikely-arg-type")
 	@Test
 	@Category({IUnitTestCategory.class})
 	public final void testEqualsDifferentSizes_4() {
@@ -254,6 +258,7 @@ public class Tuple002UnitTest {
 	/** Tests {@link Tuple002#equals(Object)}
 	 * for tuples of different sizes.
 	 */
+	@SuppressWarnings("unlikely-arg-type")
 	@Test
 	@Category({IUnitTestCategory.class})
 	public final void testEqualsDifferentSizes_5() {
@@ -284,6 +289,7 @@ public class Tuple002UnitTest {
 	/** Tests {@link Tuple002#equals(Object)}
 	 * for tuples of different sizes.
 	 */
+	@SuppressWarnings("unlikely-arg-type")
 	@Test
 	@Category({IUnitTestCategory.class})
 	public final void testEqualsDifferentSizes_6() {
@@ -313,6 +319,7 @@ public class Tuple002UnitTest {
 
 	/** Tests {@link Tuple002#equals(Object)}.
 	 */
+	@SuppressWarnings("unlikely-arg-type")
 	@Test
 	@Category({IUnitTestCategory.class})
 	public final void testEquals_1() {
@@ -351,6 +358,7 @@ public class Tuple002UnitTest {
 
 	/** Tests {@link Tuple002#equals(Object)}.
 	 */
+	@SuppressWarnings("unlikely-arg-type")
 	@Test
 	@Category({IUnitTestCategory.class})
 	public final void testEquals_2() {
@@ -389,6 +397,7 @@ public class Tuple002UnitTest {
 
 	/** Tests {@link Tuple002#equals(Object)}.
 	 */
+	@SuppressWarnings("unlikely-arg-type")
 	@Test
 	@Category({IUnitTestCategory.class})
 	public final void testEquals_3() {
@@ -427,6 +436,7 @@ public class Tuple002UnitTest {
 
 	/** Tests {@link Tuple002#equals(Object)}.
 	 */
+	@SuppressWarnings("unlikely-arg-type")
 	@Test
 	@Category({IUnitTestCategory.class})
 	public final void testEquals_4() {
@@ -465,6 +475,7 @@ public class Tuple002UnitTest {
 
 	/** Tests {@link Tuple002#equals(Object)}.
 	 */
+	@SuppressWarnings("unlikely-arg-type")
 	@Test
 	@Category({IUnitTestCategory.class})
 	public final void testEquals_5() {
@@ -503,6 +514,7 @@ public class Tuple002UnitTest {
 
 	/** Tests {@link Tuple002#equals(Object)}.
 	 */
+	@SuppressWarnings("unlikely-arg-type")
 	@Test
 	@Category({IUnitTestCategory.class})
 	public final void testEquals_6() {
@@ -541,6 +553,7 @@ public class Tuple002UnitTest {
 
 	/** Tests {@link Tuple002#equals(Object)}.
 	 */
+	@SuppressWarnings("unlikely-arg-type")
 	@Test
 	@Category({IUnitTestCategory.class})
 	public final void testEquals_7() {
@@ -579,6 +592,7 @@ public class Tuple002UnitTest {
 
 	/** Tests {@link Tuple002#equals(Object)}.
 	 */
+	@SuppressWarnings("unlikely-arg-type")
 	@Test
 	@Category({IUnitTestCategory.class})
 	public final void testEquals_8() {
@@ -617,6 +631,7 @@ public class Tuple002UnitTest {
 
 	/** Tests {@link Tuple002#equals(Object)}.
 	 */
+	@SuppressWarnings("unlikely-arg-type")
 	@Test
 	@Category({IUnitTestCategory.class})
 	public final void testEquals_9() {
@@ -655,6 +670,7 @@ public class Tuple002UnitTest {
 
 	/** Tests {@link Tuple002#equals(Object)}.
 	 */
+	@SuppressWarnings("unlikely-arg-type")
 	@Test
 	@Category({IUnitTestCategory.class})
 	public final void testEquals_10() {
@@ -693,6 +709,7 @@ public class Tuple002UnitTest {
 
 	/** Tests {@link Tuple002#equals(Object)}.
 	 */
+	@SuppressWarnings("unlikely-arg-type")
 	@Test
 	@Category({IUnitTestCategory.class})
 	public final void testEquals_11() {
@@ -731,6 +748,7 @@ public class Tuple002UnitTest {
 
 	/** Tests {@link Tuple002#equals(Object)}.
 	 */
+	@SuppressWarnings("unlikely-arg-type")
 	@Test
 	@Category({IUnitTestCategory.class})
 	public final void testEquals_12() {
@@ -769,6 +787,7 @@ public class Tuple002UnitTest {
 
 	/** Tests {@link Tuple002#equals(Object)}.
 	 */
+	@SuppressWarnings("unlikely-arg-type")
 	@Test
 	@Category({IUnitTestCategory.class})
 	public final void testEquals_13() {

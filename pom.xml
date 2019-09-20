@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 
@@ -13,45 +14,47 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 		<jacoco.maven.plugin.version>0.7.9</jacoco.maven.plugin.version>
-		
+
 		<junit-jupiter.version>5.2.0</junit-jupiter.version>
 		<junit-jupiter-api.version>5.2.0</junit-jupiter-api.version>
 		<junit-platform-launcher.version>1.2.0</junit-platform-launcher.version>
 		<org.junit.platform.version>1.2.0</org.junit.platform.version>
 		<maven-surefire-plugin.version>2.22.0</maven-surefire-plugin.version>
 		<guava.version>25.1-jre</guava.version>
-				
+
 	</properties>
-	
+
 	<profiles>
-	
+
 		<profile>
 			<id>eclipse</id>
-	        <dependencyManagement>
-	            <dependencies>
-	                <dependency>
-	                    <groupId>org.junit.platform</groupId>
-	                    <artifactId>junit-platform-launcher</artifactId>
-	                    <version>${junit-platform-launcher.version}</version>
-	                    <scope>test</scope>
-	                </dependency>
-	            </dependencies>
-	        </dependencyManagement>
-	        
-	        <dependencies>
-	            <dependency>
-	                <groupId>org.junit.platform</groupId>
-	                <artifactId>junit-platform-launcher</artifactId>
-	            </dependency>
-	        </dependencies>
-	    </profile>
-	    
-    </profiles>
-    
+			<dependencyManagement>
+				<dependencies>
+					<dependency>
+						<groupId>org.junit.platform</groupId>
+						<artifactId>junit-platform-launcher</artifactId>
+						<version>${junit-platform-launcher.version}</version>
+						<scope>test</scope>
+					</dependency>
+				</dependencies>
+			</dependencyManagement>
+
+			<dependencies>
+				<dependency>
+					<groupId>org.junit.platform</groupId>
+					<artifactId>junit-platform-launcher</artifactId>
+				</dependency>
+			</dependencies>
+		</profile>
+
+	</profiles>
+
 	<dependencyManagement>
 		<dependencies>
-		
+
 			<dependency>
 				<groupId>org.junit.jupiter</groupId>
 				<artifactId>junit-jupiter-api</artifactId>
@@ -60,18 +63,18 @@
 			</dependency>
 
 			<dependency>
-			    <groupId>org.junit.jupiter</groupId>
-			    <artifactId>junit-jupiter-engine</artifactId>
-			    <version>${junit-jupiter.version}</version>
-			    <scope>test</scope>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter-engine</artifactId>
+				<version>${junit-jupiter.version}</version>
+				<scope>test</scope>
 			</dependency>
-			
+
 			<dependency>
-			    <groupId>com.google.guava</groupId>
-			    <artifactId>guava</artifactId>
-			    <version>${guava.version}</version>
-			</dependency>						
-		
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>${guava.version}</version>
+			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 
@@ -82,11 +85,11 @@
 			<artifactId>junit-jupiter-api</artifactId>
 			<scope>test</scope>
 		</dependency>
-	
+
 		<dependency>
-		    <groupId>org.junit.jupiter</groupId>
-		    <artifactId>junit-jupiter-engine</artifactId>
-		    <scope>test</scope>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<scope>test</scope>
 		</dependency>
 
 		<dependency>
@@ -95,36 +98,36 @@
 			<version>1.16.16</version>
 			<scope>provided</scope>
 		</dependency>
-		
+
 		<dependency>
-    		<groupId>ch.qos.logback</groupId>
-    		<artifactId>logback-core</artifactId>
-		    <version>1.2.3</version>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<version>1.2.3</version>
 		</dependency>
-		
+
 		<dependency>
-    		<groupId>ch.qos.logback</groupId>
-    		<artifactId>logback-classic</artifactId>
-		    <version>1.2.3</version>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.2.3</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-math3 -->
 		<dependency>
-		    <groupId>org.apache.commons</groupId>
-		    <artifactId>commons-math3</artifactId>
-		    <version>3.6.1</version>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-math3</artifactId>
+			<version>3.6.1</version>
 		</dependency>
 
 		<dependency>
-		    <groupId>org.apache.commons</groupId>
-		    <artifactId>commons-collections4</artifactId>
-		    <version>4.1</version>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-collections4</artifactId>
+			<version>4.1</version>
 		</dependency>
 
 		<dependency>
-		    <groupId>org.apache.commons</groupId>
-		    <artifactId>commons-lang3</artifactId>
-		    <version>3.5</version>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.5</version>
 		</dependency>
 
 		<dependency>
@@ -133,27 +136,21 @@
 			<version>[1.1.0,)</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/com.google.common/google-collect -->
-		<!--  
-		<dependency>
-		    <groupId>com.google.common</groupId>
-		    <artifactId>google-collect</artifactId>
-		    <version>1.0-rc1</version>
-		</dependency>
-		-->
+		<!-- <dependency> <groupId>com.google.common</groupId> <artifactId>google-collect</artifactId> 
+			<version>1.0-rc1</version> </dependency> -->
 		<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
 		<dependency>
-		    <groupId>com.google.guava</groupId>
-		    <artifactId>guava</artifactId>
-		    <version>22.0</version>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.javatuples/javatuples -->
 		<dependency>
-		    <groupId>org.javatuples</groupId>
-		    <artifactId>javatuples</artifactId>
-		    <version>1.2</version>
+			<groupId>org.javatuples</groupId>
+			<artifactId>javatuples</artifactId>
+			<version>1.2</version>
 		</dependency>
 
 		<dependency>
@@ -164,14 +161,14 @@
 
 		<!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
 		<dependency>
-		    <groupId>javax.validation</groupId>
-		    <artifactId>validation-api</artifactId>
-		    <version>1.1.0.Final</version>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>1.1.0.Final</version>
 		</dependency>
 
 		<dependency>
-		    <groupId>com.google.guava</groupId>
-		    <artifactId>guava</artifactId>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
 		</dependency>
 
 	</dependencies>
@@ -180,58 +177,65 @@
 
 		<pluginManagement>
 			<plugins>
-	        
+
+			<plugin>
+    			<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+			</plugin>
+
 				<plugin>
-				    <artifactId>maven-surefire-plugin</artifactId>
-				    <version>${maven-surefire-plugin.version}</version>
-				    <dependencies>
-		
-				        <dependency>
-				            <groupId>org.junit.platform</groupId>
-				            <artifactId>junit-platform-surefire-provider</artifactId>
-				            <version>${org.junit.platform.version}</version>
-				        </dependency>
-				
-				        <dependency>
-				            <groupId>org.junit.jupiter</groupId>
-				            <artifactId>junit-jupiter-engine</artifactId>
-				            <version>${junit-jupiter.version}</version>
-				        </dependency>
-				
-				    </dependencies>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>${maven-surefire-plugin.version}</version>
+					<dependencies>
+
+						<dependency>
+							<groupId>org.junit.platform</groupId>
+							<artifactId>junit-platform-surefire-provider</artifactId>
+							<version>${org.junit.platform.version}</version>
+						</dependency>
+
+						<dependency>
+							<groupId>org.junit.jupiter</groupId>
+							<artifactId>junit-jupiter-engine</artifactId>
+							<version>${junit-jupiter.version}</version>
+						</dependency>
+
+					</dependencies>
 				</plugin>
-			
+
 			</plugins>
 
-	    </pluginManagement>
-	
+		</pluginManagement>
+
 		<plugins>
-		
-			<!--  The most compatible way to set the java version -->
+
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
+    			<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.6.1</version>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
+			        <compilerVersion>1.8</compilerVersion>      
+			        <fork>true</fork>
+			        <executable>C:\Program Files\Java\jdk1.8.0_131\bin\javac</executable>      
 				</configuration>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>${jacoco.maven.plugin.version}</version>
 
 				<executions>
-				
+
 					<execution>
 						<id>default-prepare-agent</id>
 						<goals>
 							<goal>prepare-agent</goal>
 						</goals>
 					</execution>
-					
+
 					<execution>
 						<id>default-report</id>
 						<phase>prepare-package</phase>
@@ -262,10 +266,11 @@
 							</rules>
 						</configuration>
 					</execution>
-					
+
 				</executions>
 
 			</plugin>
+
 		</plugins>
 	</build>
 
@@ -286,5 +291,5 @@
 			</plugin>
 		</plugins>
 	</reporting>
- 
+
 </project>

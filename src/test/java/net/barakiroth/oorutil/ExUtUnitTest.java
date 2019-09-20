@@ -10,15 +10,15 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.io.IOException;
-import javax.activity.InvalidActivityException;
 import javax.validation.ConstraintViolationException;
-import net.barakiroth.oortestutil.IUnitTestCategory;
 import org.junit.experimental.categories.Category;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import net.barakiroth.oortestutil.IUnitTestCategory;
 
 /**
  * Tests {@link net.barakiroth.util.ExUt}.
@@ -130,7 +130,7 @@ public class ExUtUnitTest {
 	@Test
 	@Category(IUnitTestCategory.class)
 	public final void testExtract() {
-		assertNull(ExUt.extract(null, InvalidActivityException.class));
+		assertNull(ExUt.extract(null, ConstraintViolationException.class));
 		assertNull(ExUt.extract(null, null));
 		Throwable throwable = new Throwable();
 		assertNull(ExUt.extract(throwable, null));
@@ -140,7 +140,7 @@ public class ExUtUnitTest {
 		throwable = ExUt.extract(throwable, IOException.class);
 		assertNotNull(throwable);
 		assertTrue(throwable instanceof IOException);
-		throwable = ExUt.extract(throwable, InvalidActivityException.class);
+		throwable = ExUt.extract(throwable, ConstraintViolationException.class);
 		assertNull(throwable);
 	}
 
