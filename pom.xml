@@ -16,6 +16,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.version>1.8</maven.compiler.version>
 		<guava.version>28.1-jre</guava.version>
 		<lombok.version>1.18.10</lombok.version>
 		<logback.version>1.2.3</logback.version>
@@ -32,6 +33,7 @@
 		<org.junit.platform.version>1.2.0</org.junit.platform.version>
 		<maven-surefire-plugin.version>2.22.0</maven-surefire-plugin.version>
 		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+			        
 		<jacoco.maven.plugin.version>0.7.9</jacoco.maven.plugin.version>
 
 	</properties>
@@ -274,7 +276,7 @@
 				<configuration>
 					<source>${maven.compiler.source}</source>
 					<target>${maven.compiler.target}</target>
-			        <compilerVersion>1.8</compilerVersion>      
+			        <compilerVersion>${maven.compiler.version}</compilerVersion>
 			        <fork>true</fork>
 			        <executable>C:\Program Files\Java\jdk1.8.0_131\bin\javac</executable>      
 				</configuration>
