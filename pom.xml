@@ -23,7 +23,7 @@
 		<version.commons-math3>3.6.1</version.commons-math3>
 		<javatuples.version>1.2</javatuples.version>
 		<commons-collections4.version>4.4</commons-collections4.version>
-		<snakeyaml.version>1.25</snakeyaml.version>
+		<snakeyaml.version>1.26</snakeyaml.version>
 		<javax.validation-api.version>2.0.1.Final</javax.validation-api.version>
 		<commons-lang3.version>3.9</commons-lang3.version>
 
