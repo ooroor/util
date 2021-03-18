@@ -1,12 +1,22 @@
 package net.barakiroth.oorutil;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
+import java.util.function.Function;
+import java.util.stream.Stream;
+
 import com.google.common.collect.Lists;
 import org.slf4j.LoggerFactory;
 import ch.qos.logback.classic.Logger;
+
+import static java.util.stream.Collectors.toList;
 
 /**
  * Utilities pertinent to arrays.
@@ -168,6 +178,79 @@ public class ArrUt {
 		} // END for
 
 		return contains;
+	}
+
+	/**
+	 * An implementation variant of #add
+	 * Ref.: https://stackoverflow.com/questions/66645283/how-do-i-produce-an-array-of-arrays-of-merged-and-permuted-source-arrays-using-j
+	 * @param a
+	 * @return
+	 */
+	private static Function<List<?>, Stream<List<?>>> add1(final Object[] a) {
+		return list -> Arrays.stream(a).map(
+				y -> {
+					final List<Object> n = new ArrayList<>(list);
+					n.add(y);
+					return n;
+				}
+		);
+	}
+
+	/**
+	 * An implementation variant of #makeCartesianProduct
+	 * @param arrays
+	 * @return
+	 */
+	public static List<List<?>> makeCartesianProduct1(final Object[]... arrays) {
+
+		Stream<List<?>> stream = Stream.of(Collections.emptyList());
+		for (Object[] array : arrays)
+			stream = stream.flatMap(add1(array));
+		return stream.collect(toList());
+	}
+
+	private static Function<List<Object>, Stream<List<Object>>> add(final Object[] sourceArrays) {
+		return
+				list ->
+						Arrays
+								.stream(sourceArrays)
+								.map(
+										sourceArray -> {
+											final List<Object> n = new ArrayList<>(list);
+											n.add(sourceArray);
+											return n;
+										}
+								);
+	}
+
+	/**
+	 * Ref.: https://stackoverflow.com/questions/66645283/how-do-i-produce-an-array-of-arrays-of-merged-and-permuted-source-arrays-using-j
+	 * @param sourceArrays
+	 * @return
+	 */
+	public static Collection<List<Object>> makeCartesianProduct(final Object[]... sourceArrays) {
+		return
+				Arrays
+						.stream(sourceArrays)
+						.map(
+								sourceArray ->
+										add(sourceArray)
+						)
+						.reduce(
+								Stream
+										.of(
+												Arrays.asList()
+										),
+								(s, p) ->
+										s.flatMap(p),
+								(a, b) ->
+										Stream.concat(a, b)
+						)
+						.collect(toList());
+	}
+
+	public static Set<List<Object>> makeCartesianProductAsSet(final Object[]... sourceArrays) {
+		return new HashSet<>(makeCartesianProduct(sourceArrays));
 	}
 	////
 	//// END Methods
