@@ -22,81 +22,12 @@ import static java.util.stream.Collectors.toList;
  * Utilities pertinent to arrays.
  */
 public class ArrUt {
-	//// =======================================================================
-	//// BEGIN nested classes and enums
-	////
-	////
-	//// END nested classes and enums
-	//// =======================================================================
-	////
-	//// S T A T I C
-	//// =======================================================================
-	//// BEGIN static variables
-	//// =======================================================================
-	//// BEGIN static public variables
-	////
-	////
-	//// END static public variables
-	//// =======================================================================
-	//// BEGIN static protected variables
-	////
-	////
-	//// END static protected variables
-	//// =======================================================================
-	//// BEGIN static package variables
-	////
-	////
-	//// END static package variables
-	//// =======================================================================
-	//// BEGIN static private variables
-	////
 	/**
 	 * For logging purposes, e.g. to file.
 	 */
 	@SuppressWarnings("unused")
 	private final static Logger logger =
 		(Logger)LoggerFactory.getLogger(ArrUt.class);
-	////
-	//// END static private variables
-	//// =======================================================================
-	//// END static variables
-	//// =======================================================================
-	////
-	//// I N S T A N C E
-	//// =======================================================================
-	//// BEGIN instance variables
-	//// =======================================================================
-	//// BEGIN instance public variables
-	////
-	////
-	//// END instance public variables
-	//// =======================================================================
-	//// BEGIN instance protected variables
-	////
-	////
-	//// END instance protected variables
-	//// =======================================================================
-	//// BEGIN instance package variables
-	////
-	////
-	//// END instance package variables
-	//// =======================================================================
-	//// BEGIN instance private variables
-	////
-	////
-	//// END instance private variables
-	//// =======================================================================
-	//// END instance variables
-	//// =======================================================================
-	//// =======================================================================
-	//// BEGIN Constructors
-	////
-	////
-	//// END Constructors
-	//// =======================================================================
-	//// =======================================================================
-	//// BEGIN Methods
-	////
 	/** Returns a new array with duplicates removed.
 	 * E.g.: [1, 2, 3, 1, 1, 2, 2, 3, 2, 3, 2, 3, 1] => [1, 2, 3]
 	 * @param arr The array in which duplicates are to be removed
@@ -252,11 +183,4 @@ public class ArrUt {
 	public static Set<List<Object>> makeCartesianProductAsSet(final Object[]... sourceArrays) {
 		return new HashSet<>(makeCartesianProduct(sourceArrays));
 	}
-	////
-	//// END Methods
-	//// =======================================================================
 }
-/*
-Revision history:
-$Log:$
-*/

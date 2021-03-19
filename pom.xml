@@ -13,29 +13,24 @@
 	<packaging>jar</packaging>
 
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>1.9</maven.compiler.source>
-		<maven.compiler.target>1.9</maven.compiler.target>
-		<maven.compiler.version>1.9</maven.compiler.version>
-		<guava.version>28.1-jre</guava.version>
-		<lombok.version>1.18.10</lombok.version>
-		<logback.version>1.2.3</logback.version>
-		<version.commons-math3>3.6.1</version.commons-math3>
-		<javatuples.version>1.2</javatuples.version>
 		<commons-collections4.version>4.4</commons-collections4.version>
-		<snakeyaml.version>1.25</snakeyaml.version>
-		<javax.validation-api.version>2.0.1.Final</javax.validation-api.version>
-		<commons-lang3.version>3.9</commons-lang3.version>
-
-		<junit-jupiter.version>5.2.0</junit-jupiter.version>
-		<junit-jupiter-api.version>5.2.0</junit-jupiter-api.version>
-		<junit-platform-launcher.version>1.2.0</junit-platform-launcher.version>
-		<org.junit.platform.version>1.2.0</org.junit.platform.version>
-		<maven-surefire-plugin.version>2.22.0</maven-surefire-plugin.version>
-		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
-			        
+		<commons-lang3.version>3.12.0</commons-lang3.version>
+		<guava.version>30.1.1-jre</guava.version>
 		<jacoco.maven.plugin.version>0.7.9</jacoco.maven.plugin.version>
-
+		<java.compilation.version>13</java.compilation.version>
+		<javatuples.version>1.2</javatuples.version>
+		<javax.validation-api.version>2.0.1.Final</javax.validation-api.version>
+		<junit-jupiter-api.version>5.8.0-M1</junit-jupiter-api.version>
+		<junit-jupiter.version>5.8.0-M1</junit-jupiter.version>
+		<junit-platform-launcher.version>1.3.2</junit-platform-launcher.version>
+		<logback.version>1.3.0-alpha5</logback.version>
+		<lombok.version>1.18.18</lombok.version>
+		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+		<maven-surefire-plugin.version>2.22.0</maven-surefire-plugin.version>
+		<org.junit.platform.version>1.3.2</org.junit.platform.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<snakeyaml.version>1.28</snakeyaml.version>
+		<version.commons-math3>3.6.1</version.commons-math3>
 	</properties>
 
 	<profiles>
@@ -240,23 +235,9 @@
 				</plugin>
 
 				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>${maven-surefire-plugin.version}</version>
-					<dependencies>
-
-						<dependency>
-							<groupId>org.junit.platform</groupId>
-							<artifactId>junit-platform-surefire-provider</artifactId>
-							<version>${org.junit.platform.version}</version>
-						</dependency>
-
-						<dependency>
-							<groupId>org.junit.jupiter</groupId>
-							<artifactId>junit-jupiter-engine</artifactId>
-							<version>${junit-jupiter.version}</version>
-						</dependency>
-
-					</dependencies>
 				</plugin>
 
 			</plugins>
@@ -266,14 +247,11 @@
 		<plugins>
 
 			<plugin>
-    			<groupId>org.apache.maven.plugins</groupId>
+				<!-- Ref.: https://www.baeldung.com/maven-java-version -->
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<source>${maven.compiler.source}</source>
-					<target>${maven.compiler.target}</target>
-			        <compilerVersion>${maven.compiler.version}</compilerVersion>
-			        <fork>true</fork>
-			        <executable>C:\DEVRES\jdk-9.0.4\bin\javac</executable>
+					<release>${java.compilation.version}</release>
 				</configuration>
 			</plugin>
 
@@ -322,6 +300,14 @@
 
 				</executions>
 
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<argLine>--illegal-access=permit</argLine>
+				</configuration>
 			</plugin>
 
 		</plugins>
